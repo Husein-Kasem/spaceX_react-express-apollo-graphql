@@ -17,6 +17,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build_windows": "react-scripts build && move build ../public",
+    "build_linux_mac": "react-scripts build && mv build ../public",
+    "build_githubpages_windows": "react-scripts build && move build ../docs",
+    "build_githubpages_linux_mac": "react-scripts build && mv build ../docs",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -34,5 +38,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "proxy": "http://localhost:5000",
+  "devDependencies": {
+    "cross-env": "^5.2.0"
   }
 }

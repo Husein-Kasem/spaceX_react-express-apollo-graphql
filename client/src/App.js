@@ -11,7 +11,8 @@ import Launch from './components/Launch';
 
 
 const client = new ApolloClient({
-  uri: 'http://localhost:5000/graphql',
+  //changing the uri for deployment (see proxy in package.json in client that makes it possible to work in development mode )
+  uri: process.env.NODE_ENV === "development" ? 'http://localhost:5000/graphql' : "/graphql",
 });
 
 

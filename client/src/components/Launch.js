@@ -39,7 +39,6 @@ export default function Launch(props) {
     mission_name,
     launch_year,
     launch_success,
-    launch_date_local,
     rocket: { rocket_id, rocket_name, rocket_type }
   } = data.launch;
 
